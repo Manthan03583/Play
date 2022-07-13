@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Play</string>
+    <string name="play">Play</string>
+    <string name="image_description">image1</string>
+    <string name="image_description4">image4</string>
+    <string name="Men">Men</string>
+    <string name="Coed">Co-ed</string>
+    <string name="women">Women</string>
+    <string name="image4">Image4</string>
+    <string name="next">Next</string>
+</resources>

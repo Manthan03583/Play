@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Play"
         tools:targetApi="31">
         <activity
+            android:name=".SkillActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity
@@ -27,8 +30,7 @@
         </activity>
         <activity
             android:name=".LeagueActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

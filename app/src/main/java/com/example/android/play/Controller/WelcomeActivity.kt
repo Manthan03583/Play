@@ -1,7 +1,8 @@
-package com.example.android.play
+package com.example.android.play.Controller
 
 import android.content.Intent
 import android.os.Bundle
+import com.example.android.play.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 class WelcomeActivity : BaseActivity() {

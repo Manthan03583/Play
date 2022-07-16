@@ -9,5 +9,8 @@
     <string name="image4">Image4</string>
     <string name="next">Next</string>
     <string name="image2">image2</string>
-    <string name="off">OFF</string>
+    <string name="beginner">Beginner</string>
+    <string name="expert">Expert</string>
+    <string name="image3">image3</string>
+    <string name="let_find_club_for_you">let find club for you</string>
 </resources>

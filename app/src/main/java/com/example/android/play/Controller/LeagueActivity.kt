@@ -1,10 +1,12 @@
-package com.example.android.play
+package com.example.android.play.Controller
 
 import kotlinx.android.synthetic.main.activity_league.*
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.android.play.EXTRA_LEAGUE
+import com.example.android.play.R
 
 class LeagueActivity : BaseActivity() {
 
@@ -40,7 +42,7 @@ class LeagueActivity : BaseActivity() {
 
     fun leagueNextOnclick(view: View){
         if(selectedLeague != ""){
-            val skillActivity = Intent(this,SkillActivity::class.java)
+            var skillActivity = Intent(this,SkillActivity::class.java)
             skillActivity.putExtra(EXTRA_LEAGUE,selectedLeague)
             startActivity(skillActivity)
         }

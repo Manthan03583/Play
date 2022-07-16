@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".Controller.SkillActivity">
 
 
     <ImageView
@@ -22,31 +22,44 @@
         android:layout_marginRight="16dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ToggleButton
-            android:id="@+id/toggleButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="@string/off" />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/beginner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_weight="1"
+            android:text="@string/beginner"
+            android:textOn="@string/beginner"
+            android:textOff="@string/beginner"
+            android:background="@drawable/button_toggle"
             android:padding="10dp"
-            android:text="@string/off" />
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:onClick="onBeginnerClick"/>
+
+        <ToggleButton
+            android:id="@+id/expert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/expert"
+            android:textOn="@string/expert"
+            android:textOff="@string/expert"
+            android:background="@drawable/button_toggle"
+            android:padding="10dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:onClick="onExpertCLick"/>
     </LinearLayout>
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="64dp"
@@ -63,7 +76,8 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onSkillNext"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

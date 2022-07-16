@@ -28,12 +28,13 @@
         android:layout_marginEnd="16dp"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/let_find_club_for_you" />
+        tools:text="@string/let_find_club_for_you"
+        android:singleLine="false"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

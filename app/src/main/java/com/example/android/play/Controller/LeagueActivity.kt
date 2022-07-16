@@ -5,12 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.android.play.EXTRA_LEAGUE
+import com.example.android.play.EXTRA_PLAYER
+import com.example.android.play.Models.Player
 import com.example.android.play.R
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    var player = Player("","")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class LeagueActivity : BaseActivity() {
         womenLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
 
-        selectedLeague = "men"
+        player.league = "men"
 
     }
 
@@ -30,20 +31,20 @@ class LeagueActivity : BaseActivity() {
         menLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
 
-        selectedLeague = "women"
+        player.league = "women"
     }
 
     fun coedOnclick(view: View){
         menLeagueBtn.isChecked = false
         womenLeagueBtn.isChecked = false
 
-        selectedLeague = "co-ed"
+        player.league = "co-ed"
     }
 
     fun leagueNextOnclick(view: View){
-        if(selectedLeague != ""){
-            var skillActivity = Intent(this,SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE,selectedLeague)
+        if(player.league != ""){
+            val skillActivity = Intent(this,SkillActivity::class.java)
+            skillActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(skillActivity)
         }
         else{
